@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>selectores 2</title>
+
+  <style>
+    /* https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Selectors */
+
+
+    /* Selector de combinación de hermanos general  ALT + 126  --->   ~  */
+
+    /* h1~* { */
+    h1~p {
+      color: green;
+    }
+
+    /* Selector de combinación de hermanos adyacentes siguiente */
+
+    /* h2+* { */
+    /* h2+p { */
+    h2+div {
+      color: red;
+    }
+
+    /* selectores más especificos que además tengan clase y/o id */
+
+    h1#title {
+      color: blue;
+    }
+
+    p.last {
+      color: steelblue;
+    }
+
+    div.last#last {
+      color: purple;
+    }
+
+    h1~*.selector {
+      background-color: lime;
+    }
+
+    /* Selector de atributo */
+
+    /* *[title] { */
+    /* [title] { */
+    a[title] {
+      /* que contenga el atributo title con cualquier valor en ese atributo*/
+      color: darkred;
+    }
+
+    a[href="enlace1.html"] {
+      /* que tenga el atributo href y de valor enlace1.html*/
+      text-decoration: none;
+    }
+
+    /* Comodines para selectores de atributo */
+
+    /* *= ---> que contiene */
+
+    p[class *="example"] {
+      color: pink;
+      background-color: rgb(17, 143, 165);
+    }
+
+    /* ^= ---> comienza con    ALT + 94 --->  ^ */
+
+    a[href ^="https"] {
+      font-size: 3rem;
+    }
+
+    /* ~= ---> que hay una clase separada de otras x espacio que sea igual a lo pasado despues del =   ALT + 126 --->  ~*/
+    p[class~="ultimo"] {
+      font-size: 5rem;
+    }
+
+    /* $= ---> termina en */
+
+    a[href $=".pe"] {
+      text-decoration: none;
+      color: red;
+    }
+
+    /* |=, comienza con algo y contiene un guión después. ALT + 124 ---> | */
+
+    *[class |="btn"] {
+      /* btn-algo*/
+      border: 1px solid blue;
+      line-height: 2.5;
+      padding: 0 .5rem;
+      background-color: red;
+      color: #FFF;
+      display: inline-block;
+      border-radius: 10px;
+      text-decoration: none;
+    }
+  </style>
+
+
+
+
+</head>
+
+<body>
+
+  <h1 id="title">Soy un título</h1>
+
+  <p class="selector">
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio architecto facilis id eaque dolores, deserunt,
+    magnam tempora unde veniam, reprehenderit excepturi cumque ea nobis non iusto nemo dignissimos cum! Omnis!
+  </p>
+  <p>
+    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Qui magni voluptates impedit aliquid quae harum sunt eum
+    laboriosam tempore nemo et ad, ea ipsam, saepe earum! Tempore esse ab adipisci.
+  </p>
+  <p>
+    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Delectus nesciunt in perspiciatis quidem suscipit
+    excepturi dolore similique saepe recusandae! Eaque officia iusto esse? Itaque animi consectetur, obcaecati
+    repudiandae enim nesciunt!
+  </p>
+
+  <div>
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum ratione architecto enim inventore iste rem ipsum
+    exercitationem laboriosam. Deleniti soluta voluptas rerum aliquam pariatur vitae dignissimos assumenda! Ab, alias
+    consequuntur.
+  </div>
+
+  <div>
+    <div>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eligendi minus quod doloribus soluta magnam quae
+      possimus pariatur tempore itaque, quibusdam voluptatum inventore incidunt enim rem molestias voluptatibus illum
+      beatae debitis?</div>
+    <h2 title>Soy un h2</h2>
+    <div>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam deserunt blanditiis cupiditate possimus
+      iste
+      ad, aliquam impedit ab velit cum assumenda soluta inventore fugit asperiores saepe natus, eligendi autem quam!
+    </div>
+    <p class="last">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Deleniti dolorum corporis commodi quos
+      debitis qui
+      dignissimos aut! Asperiores blanditiis laborum quae enim, dolorem reprehenderit iusto fugit fugiat dicta
+      accusantium
+      ea?</p>
+    <div class="last" id="last">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Odit atque rerum nam amet
+      doloremque
+      exercitationem
+      modi temporibus omnis officia velit corrupti soluta possimus minima, tempora numquam eaque, assumenda fuga eos.
+    </div>
+  </div>
+  <div>
+    <p class="example1">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Incidunt, obcaecati repudiandae omnis
+      animi reiciendis,
+      eligendi voluptate ipsam sunt perspiciatis doloremque vel aperiam nesciunt veniam dolorem numquam harum tempore
+      itaque perferendis! <a href="enlace1.html">enlace 1</a></p>
+    <p class="example2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia consectetur qui explicabo illum
+      obcaecati.
+      Necessitatibus aperiam illum doloribus cum quam et sed odit, voluptas perferendis sit, quas tempore labore
+      accusantium. <a href="#" title="soy el enlace 2">enlace 2</a></p>
+  </div>
+  <p class="ultimo">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Reiciendis, quibusdam ipsam. Deleniti
+    explicabo quam
+    impedit qui aliquam eligendi dolorum, eum reiciendis sunt blanditiis nemo consectetur, nam minus recusandae
+    inventore velit. <a href="https://pagina1.org">org</a> mas texto <a href="http://pagina1.edu.pe">edu.pe</a></p>
+
+  <p class="last ultimo clase">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Laudantium explicabo
+    praesentium
+    adipisci quis iste quae
+    est quisquam aut neque doloremque, possimus nesciunt, unde cupiditate tenetur sint. Quibusdam nesciunt enim
+    laboriosam!</p>
+
+  <div>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur praesentium itaque excepturi iste perferendis
+    debitis aperiam inventore, consequatur totam assumenda sit dolorum quaerat magnam accusamus facilis? Magnam earum
+    eum dolorem. <a href="#" class="btn-primary">botón 5</a></div>
+  <button class="btn-secondary">botón 6</button>
+</body>
+
+</html>
