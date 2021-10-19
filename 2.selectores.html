@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Selectores CSS</title>
+
+  <style>
+    /* https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Selectors */
+    /* Selectores de etiqueta o de tipo */
+
+    * {
+      /* border: 1px solid red; */
+      margin: 0;
+    }
+
+    h1 {
+      color: teal;
+      text-align: center;
+    }
+
+    p {
+      color: green;
+    }
+
+    /* Selector de ID */
+
+    #mi_parrafo {
+      color: purple;
+    }
+
+    #main-form {
+      width: 50%;
+      background-color: #ddd;
+      /* margin-left: auto;
+      margin-right: auto; */
+      margin: 1rem auto;
+      padding: 1rem;
+    }
+
+    #enlace {
+      text-decoration: none;
+    }
+
+    /* Selector de clase */
+
+    .color-lime {
+      color: lime;
+      background-color: #111;
+    }
+
+
+
+    /* Selector de grupo - Agrupando elementos */
+
+    input,
+    textarea {
+      display: block;
+    }
+
+    /* Selectores combinados */
+
+    /* Descendiente general */
+
+    body div {
+      margin: 1rem;
+    }
+
+    body a {
+      color: orange;
+      font-size: 2rem;
+    }
+
+    /* Descendiente hijo directo */
+
+    div>a {
+      border: solid red 3px;
+    }
+
+    p>a {
+      color: red;
+    }
+  </style>
+</head>
+
+<body>
+  <h1>Soy el título</h1>
+  <p>soy un párrafo <span class="color-lime">soy un span</span></p>
+  <p>soy otro párrafo <a href="#" id="enlace">enlace</a> <span class="color-lime">soy otro span</span></p>
+
+  <form id="main-form">
+    <label for="nombre">Nombre:</label>
+    <input type="text" id="nombre">
+    <label for="comment">Comentario:</label>
+    <textarea id="comment" cols="30" rows="10"></textarea>
+  </form>
+
+  <div id="mi_parrafo">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque reprehenderit voluptatibus
+    necessitatibus
+    accusamus porro consequatur obcaecati non laborum alias? Odit officiis recusandae facilis earum tempore quia fugit
+    rem nam totam? <i class="color-lime">soy un italic</i>
+  </div>
+  <div>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem, laborum beatae. Exercitationem animi est
+    dolor nemo. Eos quibusdam repellendus officia sapiente aut architecto hic, ipsum consequuntur nesciunt ut nulla
+    officiis. <a href="#">enlace 2</a>
+  </div>
+  <div>
+    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Natus quas, accusamus cum soluta, ex veniam unde aut
+      hic quae molestiae placeat, perferendis quisquam quam animi praesentium doloribus tenetur neque corporis. <a
+        href="#">Enlace dentro de un párrafo que está dentro de un div</a></p>
+  </div>
+
+
+
+
+
+
+
+
+
+</body>
+
+</html>
