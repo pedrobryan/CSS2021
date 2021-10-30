@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Especificidad y cascada</title>
+  <!-- <link rel="stylesheet" href="especificidad_cascada.css"> -->
+  <style>
+    /* https://specificity.keegan.st/ */
+    /* especificidad */
+    /*
+    desde mas alto a menos
+    ID ---100
+    Clase --- 10
+    Etiquetas --- 1
+
+    El caso de poner !important
+    es más específico.
+
+    */
+
+    #main_title {
+      /*100*/
+      color: purple;
+    }
+
+    .title {
+      /*10*/
+      color: green;
+    }
+
+    h1.title {
+      /* 1 + 10 = 11*/
+      color: blue;
+    }
+
+    h1#main_title {
+      /*1 + 100 = 101*/
+      color: orange !important;
+    }
+
+    h1 {
+      /*1*/
+      color: red !important;
+      background-color: lime;
+    }
+  </style>
+</head>
+
+<body>
+  <h1 class="title" id="main_title" style="color: gray;">Título</h1>
+  <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Accusantium ipsum veniam soluta omnis quae qui? Mollitia
+    sit voluptas assumenda, minus ullam delectus debitis recusandae incidunt, eius rem error aperiam corrupti.</p>
+
+</body>
+
+</html>

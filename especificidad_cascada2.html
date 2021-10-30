@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>cascada</title>
+  <style>
+    /* criterios
+    1. especificidad
+    - important(si hay varios con esto, se va al que tiene mayor especificidad)
+    - inline
+    - interno, externo(especificidad si son iguales el mayor peso le da al inetrno)
+   
+    2. cascada
+    si empatan en especificidad entran a resolverlo el criterio de la cscada, el último estilo (el que está más abajo se aplica)
+    */
+    /*Cascada*/
+    div h2 {
+      /* 1 + 1 = 2*/
+      color: blue !important;
+    }
+
+    article>h2 {
+      /* 1 + 1 = 2*/
+      color: green !important;
+    }
+
+    .notice {
+      color: steelblue;
+
+    }
+
+    h3 {
+      /*1*/
+      color: blue;
+      background-color: lime;
+      padding: 1rem;
+      color: red;
+    }
+  </style>
+</head>
+
+<body>
+  <div>
+    <article>
+      <h2 style="color: red !important;">Mi título</h2>
+    </article>
+  </div>
+  <h3>hola soy un h3</h3>
+
+  <section>
+    <article class="notice">
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Error repellat dolorum distinctio quisquam, suscipit
+      tenetur id earum hic laboriosam fugit nobis at aut maiores perferendis? Laborum nam architecto dolorem ullam!
+    </article>
+  </section>
+  <section>
+    <p class="notice">
+      Lorem ipsum dolor sit, amet consectetur adipisicing elit. Architecto, consequuntur delectus sint tempore voluptas
+      quasi dolorem ullam autem corrupti modi sequi soluta explicabo rerum obcaecati ducimus quis nulla in. Itaque!
+    </p>
+  </section>
+
+</body>
+
+</html>

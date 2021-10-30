@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Herencia</title>
+  <style>
+    /* https://developer.mozilla.org/en-US/docs/Learn/CSS/Building_blocks/Cascade_and_inheritance */
+    /* https://www.w3schools.com/cssref/css_colors.asp */
+    /* https://www.w3schools.com/cssref/pr_text_color.asp */
+
+
+    html {
+      color: red;
+      /*hereda esta propiedad a sus hijos*/
+      font-family: sans-serif;
+    }
+
+    body {
+      color: green;
+    }
+
+    h1 {
+      color: blue;
+    }
+
+    a {
+      color: red;
+    }
+
+    div {
+      color: purple;
+    }
+
+    /* https://developer.mozilla.org/en-US/docs/Learn/CSS/Building_blocks/Cascade_and_inheritance */
+    .main {
+      color: rebeccapurple;
+      /**En honor a la hija de una de las personas relacionadas a la especificacion CSS*/
+      border: 2px solid #ccc;
+      padding: 1em;
+    }
+
+    .special {
+      color: black;
+      font-weight: bold;
+    }
+
+    .children-box {
+      height: 200px;
+      width: 150px;
+      border: 1px solid red;
+      position: absolute;
+      background-color: inherit;
+    }
+
+    .box {
+      background-color: yellow;
+    }
+
+    .para {
+      color: initial;
+    }
+  </style>
+</head>
+
+<body>
+  <h1>Título</h1>
+  <p class="para">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos similique accusantium vero nulla sint
+    dicta, ratione
+    est distinctio illo officiis, expedita fuga recusandae? Cumque minima consequatur commodi tenetur aspernatur
+    impedit? <a href="#">enlace</a></p>
+  <div>
+    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quam, natus. Quo accusantium commodi asperiores iusto,
+      sint perspiciatis nisi quisquam dolores. Perferendis dolorem molestias, nobis laudantium accusamus ratione eius
+      voluptas asperiores!</p>
+  </div>
+
+  <ul>
+    <li>item1</li>
+    <li>item2</li>
+    <li>item3</li>
+    <li>item4</li>
+  </ul>
+
+  <!-- https://developer.mozilla.org/en-US/docs/Learn/CSS/Building_blocks/Cascade_and_inheritance -->
+
+  <ul class="main">
+    <li>Item One</li>
+    <li>Item Two
+      <ul>
+        <li>2.1</li>
+        <li>2.2</li>
+      </ul>
+    </li>
+    <li>Item Three
+      <ul class="special">
+        <li>3.1
+          <ul>
+            <li>3.1.1</li>
+            <li>3.1.2</li>
+          </ul>
+        </li>
+        <li>3.2</li>
+      </ul>
+    </li>
+  </ul>
+
+  <div class="box">
+    <div class="children-box"></div>
+  </div>
+
+</body>
+
+</html>
