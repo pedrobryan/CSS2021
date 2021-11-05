@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Márgenes</title>
+  <style>
+    * {
+      margin: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      /* height: 500px;
+      border: 2px solid blue; */
+      /* padding-left: 80px; */
+    }
+
+    p.margenes {
+      border: 1px red solid;
+      /* margin-top: 20px;
+      margin-right: 10px;
+      margin-bottom: 15px;
+      margin-left: 10px; */
+      /* margin: margin-top margin-right margin-bottom margin-left */
+      margin: 20px 10px 15px 10px;
+      margin: 20px 10px 15px;
+      margin: 20px 10px;
+      margin: 15px;
+    }
+
+    .m-auto {
+      width: 200px;
+      /* margin: auto; */
+      /* margin-left: auto; */
+      /* margin-right: auto; */
+    }
+
+    /* Márgenes negativos
+    vertical
+    - margin-top negativo, desplaza al elemento hacia arriba
+    - margin-bottom negativo, desplaza al elemento adyacente que está debajo hacia arriba 
+    */
+    .primero {
+      padding: 55px;
+      background-color: yellow;
+      margin-top: -20px;
+      /*lo desplaza 20px hacia arriba*/
+      margin-bottom: -60px;
+      /*al elemento de abajo lo desplaza 60px hacia arriba*/
+      color: red;
+    }
+
+    .segundo {
+      background-color: lime;
+    }
+
+    /* margenes negativos horizontal
+    margin-left, se expande la caja a lado izquierdo
+    margin-right, se expande la caja a lado derecho */
+    .lados {
+      margin-top: 20px;
+      border: 3px solid blue;
+      margin-left: -20px;
+      margin-right: -25px;
+    }
+
+    /* colapsado de márgenes verticales
+    ** tiene que ver con el margin-bottom y margin-top de elementos arriba y abajo de otro.
+    
+    1. hermanos adyacentes en vertical
+    - si ambos valores son positivos se considera al mayor de ellos como resultado de separación.
+    - si uno es negativo se hace una suma algebraica, y el resultado se aplica al eleemnto con mayor valor absoluto.
+    - si ambos son negativos, se considera al más negativo y para el desplazamiento considerar al que tenía ese valor mas negativo.
+    */
+    .sep {
+      height: 200px;
+      border: 1px solid red
+    }
+
+    .ady-1 {
+      background-color: lime;
+      margin-bottom: -30px;
+    }
+
+    .ady-2 {
+      background-color: yellow;
+      margin-top: 20px;
+      color: red;
+    }
+
+    /*
+    2. padre-hijo
+
+    - al colapsar el margin-top del padre con el margin-top del primer hijo, el margen aprentemente pasa al padre y el resultado es del mayor valor de ambos margenes positivos.
+
+    */
+
+    .child {
+      margin-top: 25px;
+      border: 2px solid red;
+    }
+
+    .container {
+      margin-top: 20px;
+    }
+
+    /*resolviendo colapsado de márgenes
+    1. dándole un borde al padre muy pequeño(.1px) y de color transparente
+    2. dándole un padding al padre (muy pequeño ejm .1px)
+    */
+
+    .container {
+      /* border-top: .1px solid transparent; */
+      padding-top: .1px;
+    }
+
+    /* obs, los márgenes son aplicados a elementos de bloque, en elementos inline no logran la separación pretendida, en todo caso podemos probar cambiando a inline-block a nuestro elemento inline. */
+  </style>
+</head>
+
+<body>
+  <h1>Título</h1>
+  <p class="margenes">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor fugiat ea voluptas aliquid amet?
+    Sapiente iste
+    molestias saepe sint? Iure nihil magni veritatis soluta laboriosam, cupiditate in quisquam reprehenderit itaque!</p>
+  <p class="m-auto">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptates eum assumenda architecto natus
+    dolore minima
+    aut quod in est! Suscipit ex cum cupiditate vel commodi, modi maxime vitae quod corporis!</p>
+  <p class="primero">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Iusto at nemo minus suscipit iure
+    tempore? Ducimus, rerum corporis id, unde nihil dolores, aut cupiditate recusandae necessitatibus architecto quia
+    placeat excepturi?</p>
+  <p class="segundo">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nemo ipsam dolorum sint perspiciatis,
+    accusamus officiis necessitatibus omnis obcaecati corrupti suscipit accusantium. Maxime molestias perspiciatis ad
+    dolore debitis molestiae ratione neque.</p>
+  <p class="lados">Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic labore fugiat tempora facere porro
+    laborum maiores consequatur voluptatibus impedit? Facere reiciendis optio consequuntur nesciunt consectetur
+    aspernatur nam dolorem molestiae tempora. </p>
+  <div class="sep"></div>
+  <p class="ady-1">Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi deserunt ipsum tempore nesciunt
+    quisquam esse sed, sapiente delectus dolores ducimus, maxime culpa architecto, totam fugit. Obcaecati ratione quae
+    quibusdam aperiam.</p>
+  <p class="ady-2">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Repellat vero sequi, sint voluptates ea non
+    veritatis blanditiis dolorem commodi. Natus laborum iure voluptas tempore nam praesentium ea fugiat reiciendis
+    molestiae.</p>
+  <div class="sep"></div>
+  <div class="container">
+    <p class="child">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Exercitationem quo praesentium, aliquid
+      cumque aspernatur quod temporibus! Corrupti hic expedita repellat, fugiat laudantium nobis est ullam veniam
+      pariatur cumque voluptas nulla.</p>
+    <!-- <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ab dolor optio suscipit iusto commodi aperiam error
+      reiciendis. Nostrum veritatis corrupti possimus quod voluptatum nam, aut quis asperiores quae quasi quidem?</p> -->
+  </div>
+</body>
+
+</html>

@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bordes</title>
+  <style>
+    html {
+      color: slateblue;
+    }
+
+    /* https://www.w3schools.com/css/css_border.asp */
+    p {
+      border-top: 5px dotted red;
+      border-right: 4px solid blue;
+      border-bottom: 5px dashed green;
+      border-left: 5px double purple;
+    }
+
+    .bordes {
+      border-style: dotted;
+      border-width: 5px;
+      border-color: orange;
+    }
+
+    /*por defecto el color del borde es igual al valor que trae la propiedad color de ese elemento.
+    la propiedad de style es requerida(obligatoria)*/
+
+    .style {
+      border-color: purple;
+      border-width: 10px;
+      /* border-top-style: dotted;
+      border-right-style: dashed;
+      border-bottom-style: double;
+      border-left-style: solid; */
+      border-style: dotted dashed double solid;
+    }
+
+    .width {
+      border-color: red;
+      border-style: dashed;
+      /* border-top-width: 10px;
+      border-right-width: 5px;
+      border-bottom-width: 8px;
+      border-left-width: 15px; */
+      border-width: 10px 5px 8px 15px;
+    }
+
+    .color {
+      border-style: dotted;
+      border-width: 10px;
+      /* border-top-color: red;
+      border-right-color: green;
+      border-bottom-color: purple;
+      border-left-color: blue; */
+      border-color: red green purple blue;
+    }
+
+    p.shorthand-border {
+      border: solid;
+      /*el width lo saca del navegador que en este caso le dio 3px por defecto, el color lo saca del valor de la propiedad color del elemento, si el elemnto no asigna el color le da el generado por el navegador*/
+      color: green;
+      border: solid red;
+      border: dashed purple 10px;
+    }
+
+    /* https://www.w3schools.com/cssref/pr_border-width.asp */
+    /* https://www.w3schools.com/cssref/pr_border-color.asp */
+    /* https://www.w3schools.com/cssref/pr_border-style.asp */
+  </style>
+</head>
+
+<body>
+  <h1>Bordes</h1>
+  <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sed nobis hic asperiores nisi esse sit quam aspernatur,
+    harum voluptas, ipsum eveniet iure expedita quis ullam explicabo architecto facilis magnam nihil?</p>
+  <p class="bordes">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Placeat nesciunt distinctio ab corrupti
+    perspiciatis, laudantium voluptas nihil tempore sed autem possimus nemo reiciendis dolorem optio eos adipisci,
+    deserunt animi necessitatibus!</p>
+  <p class="style">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Consectetur pariatur unde beatae officia
+    aspernatur ut doloremque nobis quis accusantium magni expedita dolorem impedit dolor ratione rerum, laboriosam vitae
+    eveniet obcaecati.</p>
+  <p class="width">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptas at repudiandae quod et odio
+    ducimus porro assumenda, laboriosam quas aspernatur, dolorum alias mollitia esse dolorem, tempora iure? Praesentium,
+    enim fugit.</p>
+  <p class="color">Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe neque quis cum recusandae, odio
+    dolores repudiandae ab nesciunt tenetur, sunt possimus doloremque! Totam doloribus eius, labore dolore ipsum cumque
+    asperiores.</p>
+  <p class="shorthand-border">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed alias aliquam iusto totam
+    autem eius, aspernatur culpa corrupti, vel exercitationem voluptatum eum consectetur asperiores nesciunt, labore
+    blanditiis quisquam. Labore, delectus.</p>
+
+</body>
+
+</html>
