@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    .button {
+      height: 100px;
+      cursor: pointer;
+      /*https://www.w3schools.com/cssref/pr_class_cursor.asp*/
+    }
+
+    .button:hover {
+      color: purple;
+    }
+
+    .button:active {
+      /*active es cuando el elemento fue dado click con el mouse*/
+      font-size: 36px;
+    }
+
+    a:link {
+      /* 1 + 10 = 11*/
+      color: green;
+    }
+
+    a:visited {
+      color: red;
+    }
+
+    a:hover {
+      color: orange;
+    }
+
+    /* especificidad
+    1. selectores de tipo(elementos) se le daba un peso de 1 unidad
+    2. selectores de clases, pseudoclases, atributos ---> 10
+    3. selectores de id --> 100
+    */
+
+    .box {
+      height: 100px;
+    }
+
+    .box:hover {
+      /*10+10*/
+      background: lime;
+    }
+
+    input[type=text]:focus {
+      color: red;
+      border: solid;
+      outline: none;
+    }
+
+    :disabled {
+      color: red;
+      background-color: lime;
+    }
+
+    input[type="checkbox"]:checked {
+      box-shadow: 0 0 0 3px hotpink;
+    }
+
+    input:required {
+      background-color: green;
+    }
+
+    .box-2 {
+      margin-top: 20px;
+      border: solid blue;
+      padding: 15px;
+    }
+
+    p:not(.article) {
+      color: green;
+    }
+
+    :empty:not(.box, input) {
+      height: 50px;
+      background-color: blue;
+    }
+  </style>
+</head>
+
+<body>
+  <!-- https://developer.mozilla.org/en-US/docs/Web/CSS/Pseudo-classes -->
+
+</body>
+<button class="button">Hola soy un botón</button>
+<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam laborum eaque quos natus optio, porro provident
+  inventore! Molestias at asperiores, quis fugit, laudantium odio sed, nemo cum repudiandae facilis exercitationem. <a
+    href="#">hola soy un enlace</a></p>
+<div class="box"></div>
+
+<input type="text">
+<select name="" id="">
+  <option value="1" selected disabled>seleccione un país</option>
+  <option value="2">Perú</option>
+  <option value="3">Brasil</option>
+</select>
+<h3>Elegir música de tu preferencia:</h3>
+<label for="rock">Rock</label>
+<input type="checkbox" id="rock" name="musica">
+<label for="techno">Technok</label>
+<input type="checkbox" id="techno" name="musica">
+<input type="email" required>
+
+<div class="box-2">
+  <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quos commodi, officia quam repellendus enim dolore? Eos
+    repellat voluptatibus cumque hic impedit iusto nobis, perspiciatis aspernatur a incidunt doloremque consectetur
+    natus?</p>
+  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed nesciunt, reprehenderit unde itaque beatae totam
+    veniam accusamus quia atque eos dolor optio molestiae temporibus exercitationem accusantium culpa! Doloremque,
+    soluta magni.</p>
+  <p class="article">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolorum fugiat odit officiis velit vero
+    cupiditate
+    eveniet exercitationem veritatis aut? Nemo assumenda iusto voluptate facilis corporis ipsam eos repellendus, ipsa
+    voluptas.</p>
+</div>
+<div class="separador"></div>
+
+</html>
