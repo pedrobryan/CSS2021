@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Float</title>
+  <style>
+    /* https://developer.mozilla.org/en-US/docs/Web/CSS/float */
+    /* https://www.w3schools.com/css/css_float.asp */
+    .container {
+      box-sizing: border-box;
+      border: 10px solid red;
+      margin-top: 100px;
+      color: purple;
+      font-size: 36px;
+    }
+
+    .item-1 {
+      background-color: lime;
+      float: left;
+      width: 50%;
+    }
+
+    .item-2 {
+      background: yellow;
+      float: right;
+    }
+
+    .hermano {
+      background-color: black;
+      color: white;
+      margin-top: 0;
+    }
+
+    :empty {
+      height: 200px;
+    }
+
+    .box {
+      border: thin solid blue;
+    }
+
+    .elemento-flotante {
+      border: solid red;
+      float: left;
+      float: right;
+    }
+
+    .ejemplo {
+      margin-top: 20px;
+      border: 10px dashed blue;
+      overflow: hidden;
+    }
+
+    .f-1 {
+      background-color: lime;
+      float: left;
+      width: 50%;
+    }
+
+    .f-2 {
+      background-color: yellow;
+      float: right;
+      width: 50%;
+    }
+
+    footer {
+      background-color: #000;
+      color: #FFF;
+      clear: left;
+      clear: right;
+      clear: both;
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="container">
+    <div class="item-1">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quia, sint corrupti nemo repudiandae
+      aliquam ab numquam atque aut eveniet a quae asperiores velit sunt, cumque optio, dolorum exercitationem ad error!
+    </div>
+    <div class="item-2">Lorem?</div>
+  </div>
+  <p class="hermano">Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus placeat tenetur blanditiis, atque
+    commodi laborum
+    ullam officiis aspernatur dignissimos repudiandae sunt officia numquam aliquam fugiat molestiae reiciendis sit
+    obcaecati ex.</p>
+  <div></div>
+
+  <div class="box">
+    <p class="elemento-flotante">hola soy el elemnto qu flota</p>
+    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quaerat nisi libero eligendi magni at praesentium
+      ratione, eaque voluptatum dignissimos aliquid, delectus voluptatibus quasi. Officiis beatae ut doloremque eligendi
+      sapiente enim!</p>
+  </div>
+  <div class="ejemplo">
+    <p class="f-1">Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi tenetur harum repellat itaque ea
+      aliquid laboriosam eos voluptate vitae? Fugit, cumque? Incidunt inventore rerum nobis sapiente aperiam nesciunt
+      numquam exercitationem?</p>
+    <p class="f-2">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sequi nemo laborum placeat architecto
+      consequatur eum ut accusamus sed, explicabo doloribus aperiam necessitatibus quisquam adipisci? Ut laborum sequi
+      eveniet quasi modi. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Iste tempora expedita eveniet rem
+      obcaecati impedit dolor ut veniam illum odit, explicabo at dicta deserunt maiores? Quibusdam exercitationem et in
+      assumenda. </p>
+  </div>
+  <footer>
+    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Iure hic ratione velit veniam. Porro dolor ullam
+      perferendis in. Ut, consectetur doloremque quos nisi assumenda eaque. Corrupti, neque velit? Tenetur, suscipit!
+    </p>
+  </footer>
+  <!-- https://desarrolloweb.com/articulos/problema-float-maquetacion-css.html -->
+
+</body>
+
+</html>

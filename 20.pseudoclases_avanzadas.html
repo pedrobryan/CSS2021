@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pseudoclases avanzadas 1</title>
+  <style>
+    /* :first-child
+    
+    busca al elemento que es primer hijo, tiene que ser ese elemento no otro hjo de distinto tipo(si es que especificamos un tipo)*/
+    div> :first-child {
+      color: blue;
+      margin-top: 10px;
+    }
+
+    /* last-child 
+    buscamos al último hijo que coincida.tiene que ser ese elemento no otro hjo de distinto tipo(si es que especificamos un tipo)
+    */
+    div>p:last-child {
+      color: purple;
+    }
+
+    /* :first-of-type
+    al primero de su tipo
+    */
+    .container> :first-of-type {
+      color: orange;
+    }
+
+    /* last-of-type
+    al último de su tipo
+    
+    */
+    .container> :last-of-type {
+      background: lime;
+    }
+  </style>
+</head>
+
+<body>
+
+  <h1>Pseudoclase avanzadas</h1>
+  <h2>first-child</h2>
+
+</body>
+<div>Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti voluptatibus ut ipsam a fugit! Nisi perspiciatis
+  quasi placeat vero molestias mollitia voluptatibus similique adipisci ea. Nisi illo voluptatibus quasi praesentium.
+</div>
+
+<div class="father">
+  <article>soy el article</article>
+  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati qui, commodi assumenda temporibus facere
+    deleniti suscipit laudantium eos autem ipsam ex voluptatem dicta, exercitationem quae inventore. Voluptatibus sint
+    aliquid harum!</p>
+  <article>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Omnis officia reiciendis a assumenda accusantium
+    praesentium illo! Nobis, corrupti quasi! Tempore placeat voluptatibus obcaecati rerum ipsa, expedita sequi pariatur.
+    Amet, ad?</article>
+  <div>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate, nihil animi exercitationem adipisci
+    asperiores vitae, deserunt praesentium consectetur, ipsa atque nam esse ut officia sed soluta. Praesentium provident
+    molestias doloremque?</div>
+  <div>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Accusamus deleniti reiciendis cum facilis beatae
+    delectus placeat nulla error, vel amet distinctio odit laudantium animi quod labore omnis iusto fuga? Molestiae.
+  </div>
+  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus voluptates non eum porro veniam fugit excepturi
+    quam illo, sequi, quibusdam ullam quas? Aperiam sint, necessitatibus sed officiis delectus reprehenderit tempora!
+  </p>
+</div>
+
+<section class="type">
+  <div class="container">
+    <div>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Laborum dolor quasi porro architecto assumenda
+      obcaecati, facere, impedit deserunt ad atque tempora suscipit voluptas commodi voluptate? Animi ut reprehenderit
+      ducimus delectus?</div>
+    <article>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Error delectus sunt culpa consequatur quas
+      adipisci, ad officia consectetur suscipit quia commodi sapiente nesciunt temporibus illo? Eos praesentium
+      explicabo magni fugit!</article>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur, autem aliquid numquam, fugiat quia, nobis
+      ducimus cumque totam quo delectus perferendis dolorem accusamus hic odio nisi qui est velit facilis?</p>
+    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Autem, totam vero sint assumenda tempora commodi rerum
+      reprehenderit molestias delectus quod inventore! Et voluptas velit aliquam eum, officiis temporibus odio tenetur?
+    </p>
+    <div>Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus temporibus quasi vel, beatae vitae voluptatem
+      atque facilis iure reprehenderit magni quaerat, ipsum tenetur veritatis libero quas enim. Enim, sit ut.</div>
+  </div>
+</section>
+
+</html>

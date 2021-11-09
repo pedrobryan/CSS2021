@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+    }
+
+    .header {
+      background-color: #ddd;
+      height: 150px;
+      overflow: hidden;
+    }
+
+    .logo-container {
+      float: left;
+      height: 150px;
+      padding: 35px 25px;
+      width: 30%;
+    }
+
+    .logo {
+      height: 80px;
+      display: block;
+    }
+
+    .menu-navegation {
+      float: right;
+      width: 70%;
+      height: 150px;
+      overflow: hidden;
+    }
+
+    .menu {
+      padding-left: 0;
+      list-style: none;
+      margin-top: 0;
+      overflow: hidden;
+      height: 150px;
+      padding-top: 100px;
+      padding-right: 20px;
+      float: right;
+    }
+
+    .menu__item {
+      float: left;
+      font-size: 16px;
+    }
+
+    .menu__item:hover .menu__link {
+      color: #ddd;
+      background-color: #222;
+    }
+
+    .menu__link {
+      text-decoration: none;
+      color: black;
+      padding: 10px 15px;
+      transition: all ease-in-out .3s;
+    }
+  </style>
+</head>
+
+<body>
+  <header class="header">
+    <div class="logo-container">
+      <img
+        src="https://cdn-icons.flaticon.com/png/512/2203/premium/2203919.png?token=exp=1636342952~hmac=9551fbe65f9062ff8a44d559ac3d05a6"
+        alt="una mascota de logo" class="logo">
+    </div>
+    <nav class="menu-navegation">
+      <ul class="menu">
+        <li class="menu__item"><a href="#" class="menu__link">Inicio</a></li>
+        <li class="menu__item"><a href="#" class="menu__link">Servicios</a></li>
+        <li class="menu__item"><a href="#" class="menu__link">Mascotas</a></li>
+        <li class="menu__item"><a href="#" class="menu__link">Contacto</a></li>
+      </ul>
+    </nav>
+  </header>
+  <!-- También se puede hacer el menú sin usar float, usando display: inline-block, considerando que los eleemntos inline-block generan un espaciado entre elementos inlie-block y para arreglarlo usamos el truco del font-size:0 en el padre y en el hijo debemos reponer esa propiedad(font-size) y también ver si es necesario usar vertical-align: top (en el hijo) si es requerido. -->
+  <!-- Hay mejores formas de hacer un menú usando otros valores para el display que veremos más adelante como el flex, grid que son módulos agregados en CSS versión 3 y estos módulos nos dan mayores alternativas para cuando construyamos nuestros layout(disposición de los eleemntos en la página usando CSS) -->
+  <!-- La propiedad transition es más avanzada y pertenece al curso de animaciones con CSS que escapa del alcance de este curso, aunque se dio una breve descripción de lo que nos ayudó con el menú cuando pasamos de un valor a otro en el hover. -->
+
+</body>
+
+</html>

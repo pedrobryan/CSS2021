@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Menú horizontal</title>
+  <style>
+    /* https://www.flaticon.com/ */
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+    }
+
+    .header {
+      /* height: 150px; */
+      background-color: #ddd;
+      /* font-size: 0; */
+      overflow: hidden;
+    }
+
+    .logo-container {
+      height: 150px;
+      width: 30%;
+      /* display: inline-block;*/
+      float: left;
+      /* line-height: 0; */
+      padding: 35px 20px;
+    }
+
+    .logo {
+      height: 80px;
+      display: block;
+    }
+
+    .menu-container {
+      height: 150px;
+      width: 70%;
+      /* display: inline-block;      
+      vertical-align: top;
+      font-size: 16px; */
+      float: right;
+      overflow: hidden;
+      padding-top: 100px;
+    }
+
+    .menu {
+      margin-top: 0;
+      list-style-type: none;
+      padding-left: 0;
+      overflow: hidden;
+      float: right;
+      /* font-size: 0; */
+    }
+
+    .menu__item {
+      float: left;
+      /* display: inline-block;
+      font-size: 16px; */
+    }
+
+    .menu__item:hover .menu__link {
+      background-color: #222;
+      color: #FFF;
+    }
+
+    .menu__link {
+      text-decoration: none;
+      padding: 10px 15px;
+      display: block;
+      color: black;
+      transition: all ease-in-out .4s;
+    }
+  </style>
+</head>
+
+<body>
+  <header class="header">
+    <div class="logo-container">
+      <img class="logo" src="https://cdn-icons-png.flaticon.com/512/489/489868.png" alt="logo">
+    </div>
+    <nav class="menu-container">
+      <ul class="menu">
+        <li class="menu__item"><a class="menu__link" href="#">Inicio</a></li>
+        <li class="menu__item"><a class="menu__link" href="#">Mascotas</a></li>
+        <li class="menu__item"><a class="menu__link" href="#">Servicios</a></li>
+        <li class="menu__item"><a class="menu__link" href="#">Contacto</a></li>
+      </ul>
+    </nav>
+  </header>
+
+</body>
+
+</html>
