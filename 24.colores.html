@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    /* https://developer.mozilla.org/en-US/docs/Web/CSS/color_value */
+    .box {
+      color: red;
+      background-color: cyan;
+      box-shadow: 10px 10px 5px 5px blue;
+      border: solid 5px purple;
+      border: solid 5px rgb(140, 12, 152);
+    }
+
+    .colores {
+      /* color: #rrggbb; */
+      /* 10 -> A
+      11 -> B
+      12 -> C
+      15 -> F */
+
+      /* 00 al FF */
+      /* #000000 -> #000
+      #FFFFFF -> #FFF */
+      color: #6033db;
+      color: rgba(120, 55, 200, 0.7);
+      color: #749e75CC;
+      background-color: hsl(0, 100%, 50%);
+      color: #FFF;
+      background-color: hsl(80, 100%, 50%);
+      background-color: hsl(80, 100%, 25%);
+      background-color: hsl(80, 100%, 80%);
+      background-color: hsl(80, 100%, 50%);
+
+      background-color: hsla(250, 100%, 50%, 0.8);
+    }
+
+    /* https://www.w3schools.com/colors/colors_hsl.asp */
+
+    .caja {
+      color: rgb(5, 37, 2);
+      height: 200px;
+      width: 200px;
+      background-color: #FF22AF;
+      box-shadow: 10px 10px 5px 5px;
+    }
+
+    .caja:hover {
+      background-color: currentColor;
+    }
+
+    /* https://color.adobe.com/es/create/color-wheel   */
+
+    .complementario {
+      height: 250px;
+      width: 200px;
+      margin-top: 25px;
+      background-color: #ADEFFF;
+      color: #A86222;
+      padding: 10px;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="box">
+    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. At laboriosam tempore dolore, sit eligendi nihil
+      voluptas vero dignissimos necessitatibus maiores distinctio eius, quas rerum consequuntur voluptatibus odit unde
+      expedita harum.</p>
+  </div>
+  <p class="colores">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sequi, ab. Laudantium possimus impedit
+    natus id voluptatum quibusdam veniam. Explicabo, aliquam suscipit. Porro nam, similique eum beatae vel temporibus
+    reprehenderit et?</p>
+  <div class="caja">
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus optio autem nobis ab, repellendus error impedit
+      labore, perspiciatis corporis numquam iste reiciendis? Eius distinctio nobis, beatae ipsam libero minus deserunt?
+    </p>
+  </div>
+
+  <div class="complementario">
+    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Beatae, cumque. Ut nostrum aspernatur facere animi, ex
+      saepe numquam itaque neque culpa sapiente, earum quo incidunt ducimus, vel quidem dolor similique.</p>
+  </div>
+</body>
+
+</html>
